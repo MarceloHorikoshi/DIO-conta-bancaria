@@ -223,6 +223,7 @@ class Deposito(Transacao):
 def log_transacao(func):
     def wrapper(*args, **kwargs):
         # Log da funcao com nome e argumentos
+        print(f'Data atual: {datetime.now()}')
         print(f'Chamando a função {func.__name__} com os args: {args}, kwargs: {kwargs}')
 
         # chama a funcao original
